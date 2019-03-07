@@ -25,15 +25,22 @@ counterB.onclick = function(){
 }
 
 let valueInput = document.getElementById('numsField');
+let header = document.getElementById('title2')
 console.log(numsField);
 valueInput.onkeypress = function(event){
 
-if(event.which == 13 || event.keyCode == 13)){
-setInterval(function(){
-   let i = valueInput.value
-   for (i>0; i<valueInput; i--){
-     alert("Time remaining" + i)
-   }
+if(event.which == 13 || event.keyCode == 13){
+var timing = setInterval(function(){
+  valueInput.value--;
+  header.innerHTML = valueInput.value;
+  console.log(valueInput.value);
+ if (valueInput.value === "0"){
+   clearInterval(timing);
+   alert("Time Is up!")
+   header.innerHTML = "Time is Up!";
+   valueInput = 0;
+ }
+    
 }, 1000)
 
 }
