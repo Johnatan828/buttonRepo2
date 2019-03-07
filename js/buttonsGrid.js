@@ -16,4 +16,27 @@ document.getElementById("btn"+ids[index]).innerHTML= item;
             })
 console.log(nums)
 }  
+let cont =0;
+var counterB =document.getElementById('counter');
+
+counterB.onclick = function(){
+  
+  counterB.innerHTML = 'You clicked me ' + cont++ + ' times.' ;
+}
+
+let valueInput = document.getElementById('numsField');
+console.log(numsField);
+valueInput.onkeypress = function(event){
+
+if(event.which == 13 || event.keyCode == 13)){
+setInterval(function(){
+   let i = valueInput.value
+   for (i>0; i<valueInput; i--){
+     alert("Time remaining" + i)
+   }
+}, 1000)
+
+}
+}
+
 

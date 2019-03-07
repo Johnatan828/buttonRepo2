@@ -1,9 +1,23 @@
-.buttonContainer {
-    width: 75%;
+.titles{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkgreen;
 }
 
+
+.buttonContainer {
+    width: 60%;
+    margin: 0 auto;}
+
 .buttonContainer > .buttonClass{
-    width: 30%;
+    width: 32.5%;
     height: 48px;
     font-size: 24px;
+}
+#counter{
+    background-color: aqua;
+    width: 30%;;
+    height: 30%;
+    font-size: 12px;
+    text-align: center;
 }
