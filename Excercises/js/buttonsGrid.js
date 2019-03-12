@@ -30,7 +30,8 @@ console.log(numsField);
 valueInput.onkeypress = function(event){
 
 if(event.which == 13 || event.keyCode == 13){
-var timing = setInterval(function(){
+
+  var timing = setInterval(function(){
   valueInput.value--;
   header.innerHTML = valueInput.value;
   console.log(valueInput.value);
@@ -39,11 +40,25 @@ var timing = setInterval(function(){
    alert("Time Is up!")
    header.innerHTML = "Time is Up!";
    valueInput = 0;
- }
-    
+ } 
 }, 1000)
-
 }
+}
+var inter,t;
+function interval(){
+    t=1;
+    inter=setInterval(function(){
+        document.getElementById("testdiv").innerHTML=t++;
+    },1000,"JavaScript");
+}
+function timeout(){
+    clear();
+    setTimeout(function(){
+        document.getElementById("testdiv").innerHTML="Pasaron 2 segundos antes de que vieras esto.";
+    },2000,"JavaScript");
+}
+function clear(){
+    clearInterval(inter);
 }
 
 
