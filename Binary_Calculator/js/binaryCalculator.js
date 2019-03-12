@@ -13,6 +13,11 @@ function clickClr(){
     elem.innerHTML = "";
 }
 function clickEql(){
+let re = /^\b[01]+\b[\+\*\/\-]\b[01]+\b$/;
+console.log(re.test(elem.innerText));
+if (re.test(elem.innerText)){
+    console.log("Operation successfully done!");
+
     let [num1, num2] = elem.innerText.split(operator);
     
     switch(operator){
@@ -30,7 +35,10 @@ function clickEql(){
             break;
         default: console.log("something");
     }
-    
+} else {
+    res = "It must be: Number + Operator + Number";
+    alert('Keep the strict order: Operand1(Number) followed by an Operator(+, -, *, /) and followed by Operand2(Number)');
+}
     elem.innerHTML = res;
 }
 function clickSum(){
